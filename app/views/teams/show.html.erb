@@ -1,0 +1,10 @@
+<h1>Teams#show</h1>
+<p>Find me in app/views/teams/show.html.erb</p>
+
+<%= @team.name %>
+<% @team.superheros.each do |s| %>
+  <%= s.name %>
+  <% end %>
+
+<%= link_to 'Edit', edit_team_path(@team) %>
+<%= link_to 'DESTROY', @team, method: :delete %>

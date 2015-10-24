@@ -1,0 +1,13 @@
+<h1>Superheros#_form</h1>
+<p>Find me in app/views/superheros/_form.html.erb</p>
+
+<%= form_for @superhero do |f| %>
+  <%= f.text_field :name %>
+  <%= f.collection_check_boxes(:team_ids, @teams, :id, :name) do |b|%>
+  <div>
+    <%= b.check_box %>
+    <%= b.label %>
+  </div>
+  <% end %>
+  <%= f.submit %>
+<% end %>

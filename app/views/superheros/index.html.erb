@@ -1,0 +1,15 @@
+<h1>Superheros#index</h1>
+<p>Find me in app/views/superheros/index.html.erb</p>
+
+<% @superheros.each do |s| %>
+<p>
+  <%= s.name %> 
+  <% s.teams.each do |t|%>
+  <%= t.name %>
+  <% end  %>
+  <%= link_to 'Edit', edit_superhero_path(s) %>
+  <%= link_to 'Delete', s, method: :delete %>
+</p>
+<% end %>
+
+<%= link_to 'Add Superhero', new_superhero_path %>
